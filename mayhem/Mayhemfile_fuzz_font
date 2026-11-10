@@ -1,0 +1,9 @@
+project: savantenvs/defold
+target: fuzz_font
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_font/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_font
+    libfuzzer: true
+    timeout: 60

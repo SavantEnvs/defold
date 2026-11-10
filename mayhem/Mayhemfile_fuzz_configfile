@@ -1,0 +1,9 @@
+project: savantenvs/defold
+target: fuzz_configfile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_configfile/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_configfile
+    libfuzzer: true
+    timeout: 30
